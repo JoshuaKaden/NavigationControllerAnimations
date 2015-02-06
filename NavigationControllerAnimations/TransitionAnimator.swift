@@ -10,6 +10,7 @@ import UIKit
 
 class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
+    let duration: NSTimeInterval = 0.5
     var type: HSTransitionType = .Standard
     var operation: UINavigationControllerOperation = .None
     
@@ -21,7 +22,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 1
+        return self.duration
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -62,7 +63,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
         toView.frame = frame
         
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(self.duration, animations: {
             
             switch self.type {
             case .Standard:
@@ -82,7 +83,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     private func performPopAnimation(#fromView: UIView, completion: () -> ()) {
         fromView.superview?.bringSubviewToFront(fromView)
         var frame = fromView.frame
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(self.duration, animations: {
             
             switch self.type {
             case .Standard:

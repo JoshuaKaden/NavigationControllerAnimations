@@ -23,5 +23,5 @@ class RootNavigationControllerDelegate: NSObject, UINavigationControllerDelegate
         self.transitionType = .Standard
         return animator
     }
-
+    
 }

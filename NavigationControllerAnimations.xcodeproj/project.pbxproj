@@ -16,8 +16,7 @@
 		4E046B3C1A842A8B00F90DB5 /* RootNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E046B3B1A842A8B00F90DB5 /* RootNavigationControllerDelegate.swift */; };
 		4E046B3E1A842B2300F90DB5 /* UINavigationController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E046B3D1A842B2300F90DB5 /* UINavigationController+Transitions.swift */; };
 		4E046B401A842D6600F90DB5 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E046B3F1A842D6600F90DB5 /* TransitionAnimator.swift */; };
-		4ECAADDC1A84380A00D08B16 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAADDB1A84380A00D08B16 /* PlayViewController.swift */; };
-		4ECAADDE1A84386300D08B16 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAADDD1A84386300D08B16 /* CreateViewController.swift */; };
+		4ECAADDC1A84380A00D08B16 /* AlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAADDB1A84380A00D08B16 /* AlphaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +43,7 @@
 		4E046B3B1A842A8B00F90DB5 /* RootNavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		4E046B3D1A842B2300F90DB5 /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
 		4E046B3F1A842D6600F90DB5 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
-		4ECAADDB1A84380A00D08B16 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
-		4ECAADDD1A84386300D08B16 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		4ECAADDB1A84380A00D08B16 /* AlphaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4E046B1D1A8428B500F90DB5 /* RootViewController.swift */,
-				4ECAADDB1A84380A00D08B16 /* PlayViewController.swift */,
-				4ECAADDD1A84386300D08B16 /* CreateViewController.swift */,
+				4ECAADDB1A84380A00D08B16 /* AlphaViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -245,10 +242,9 @@
 			files = (
 				4E046B3C1A842A8B00F90DB5 /* RootNavigationControllerDelegate.swift in Sources */,
 				4E046B1E1A8428B500F90DB5 /* RootViewController.swift in Sources */,
-				4ECAADDE1A84386300D08B16 /* CreateViewController.swift in Sources */,
 				4E046B401A842D6600F90DB5 /* TransitionAnimator.swift in Sources */,
 				4E046B3E1A842B2300F90DB5 /* UINavigationController+Transitions.swift in Sources */,
-				4ECAADDC1A84380A00D08B16 /* PlayViewController.swift in Sources */,
+				4ECAADDC1A84380A00D08B16 /* AlphaViewController.swift in Sources */,
 				4E046B1C1A8428B500F90DB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  RootViewController.swift
+//  AlphaViewController.swift
 //  NavigationControllerAnimations
 //
 //  Created by Josh Kaden on 2/5/15.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class AlphaViewController: UIViewController {
 
-    private let navigationControllerDelegate = RootNavigationControllerDelegate()
     private let titleLabel = UILabel()
     private let standardButton: UIButton = UIButton.buttonWithType(.System) as UIButton
     private let fadeButton: UIButton = UIButton.buttonWithType(.System) as UIButton
@@ -18,26 +17,23 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.title = "Root View Controller"
-        
-        self.navigationController?.delegate = self.navigationControllerDelegate
-        self.navigationController?.navigationBarHidden = true
+        self.view.backgroundColor = UIColor.lightGrayColor()
+        self.title = "Alpha View Controller"
         
         self.titleLabel.textAlignment = .Center
         self.titleLabel.text = self.title
         self.view.addSubview(self.titleLabel)
         
         self.standardButton.addTarget(self, action: "standardButtonWasTapped", forControlEvents: .TouchUpInside)
-        self.standardButton.setTitle("Standard", forState: .Normal)
+        self.standardButton.setTitle("Standard back", forState: .Normal)
         self.view.addSubview(self.standardButton)
-
+        
         self.fadeButton.addTarget(self, action: "fadeButtonWasTapped", forControlEvents: .TouchUpInside)
-        self.fadeButton.setTitle("Fade", forState: .Normal)
+        self.fadeButton.setTitle("Fade back", forState: .Normal)
         self.view.addSubview(self.fadeButton)
         
         self.fromBottomButton.addTarget(self, action: "fromBottomButtonWasTapped", forControlEvents: .TouchUpInside)
-        self.fromBottomButton.setTitle("From Bottom", forState: .Normal)
+        self.fromBottomButton.setTitle("From Bottom back", forState: .Normal)
         self.view.addSubview(self.fromBottomButton)
     }
     
@@ -50,20 +46,18 @@ class RootViewController: UIViewController {
     }
     
     func standardButtonWasTapped() {
-        self.pushWithTransition(.Standard)
+        self.navigationController?.setTransitionType(.Standard)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func fadeButtonWasTapped() {
-        self.pushWithTransition(.Fade)
+        self.navigationController?.setTransitionType(.Fade)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func fromBottomButtonWasTapped() {
-        self.pushWithTransition(.FromBottom)
+        self.navigationController?.setTransitionType(.FromBottom)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
-    private func pushWithTransition(transitionType: HSTransitionType) {
-        let viewController = AlphaViewController()
-        self.navigationController?.setTransitionType(transitionType)
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
 }
