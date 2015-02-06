@@ -15,11 +15,14 @@ class RootNavigationControllerDelegate: NSObject, UINavigationControllerDelegate
     It is more easily set on the UINavigationController itself, via the +Transitions extension. */
     var transitionType: HSTransitionType = .Standard
     
+
+    // MARK: - UINavigationControllerDelegate Methods
+    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if self.transitionType == .Standard {
             return nil
         }
-        let animator = TransitionAnimator.animatorWithType(self.transitionType, operation: operation)
+        let animator = TransitionAnimator(type: self.transitionType, operation: operation)
         self.transitionType = .Standard
         return animator
     }

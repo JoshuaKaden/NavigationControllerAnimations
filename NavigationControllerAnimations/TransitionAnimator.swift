@@ -10,16 +10,17 @@ import UIKit
 
 class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let duration: NSTimeInterval = 0.5
-    var type: HSTransitionType = .Standard
-    var operation: UINavigationControllerOperation = .None
+    private let duration: NSTimeInterval = 0.5
+    private let type: HSTransitionType
+    private let operation: UINavigationControllerOperation
     
-    class func animatorWithType(type: HSTransitionType, operation: UINavigationControllerOperation) -> TransitionAnimator {
-        let animator = self.init()
-        animator.type = type
-        animator.operation = operation
-        return animator
+    init(type: HSTransitionType, operation: UINavigationControllerOperation) {
+        self.type = type
+        self.operation = operation
+        super.init()
     }
+    
+    // MARK: - UIViewControllerAnimatedTransitioning Methods
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         return self.duration
@@ -50,6 +51,8 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             return()
         }
     }
+    
+    // MARK: - Custom Animation Methods
     
     private func performPushAnimation(#toView: UIView, completion: () -> ()) {
         var frame = toView.frame
