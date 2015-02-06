@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum HSTransitionType {
+    case Standard, Fade, FromBottom
+}
+
 class RootNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
 
     /** Set this if you want a custom animation when Pushing or Popping.

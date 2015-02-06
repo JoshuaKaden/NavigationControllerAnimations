@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum HSTransitionType {
-    case Standard, Fade, FromBottom
-}
-
 extension UINavigationController {
     
     func transitionType() -> HSTransitionType {
