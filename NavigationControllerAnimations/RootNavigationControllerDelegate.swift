@@ -20,7 +20,7 @@ class RootNavigationControllerDelegate: NSObject, UINavigationControllerDelegate
     var transitionType: HSTransitionType = .Standard
     
 
-    // MARK: - UINavigationControllerDelegate Methods
+    // MARK: - UINavigationControllerDelegate Functions
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if self.transitionType == .Standard {

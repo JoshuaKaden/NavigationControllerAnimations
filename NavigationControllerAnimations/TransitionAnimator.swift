@@ -20,18 +20,13 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         super.init()
     }
     
-    // MARK: - UIViewControllerAnimatedTransitioning Methods
+    // MARK: - UIViewControllerAnimatedTransitioning Functions
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         return self.duration
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!.view
-        let fromView = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!.view
-        
-        transitionContext.containerView().addSubview(toView)
-        
         let completion = {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         }
@@ -40,6 +35,11 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             completion()
             return()
         }
+        
+        let toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!.view
+        let fromView = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!.view
+        
+        transitionContext.containerView().addSubview(toView)
         
         switch self.operation {
         case .Push:
@@ -52,7 +52,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
     
-    // MARK: - Custom Animation Methods
+    // MARK: - Custom Animation Functions
     
     private func performPushAnimation(#toView: UIView, completion: () -> ()) {
         var frame = toView.frame
