@@ -17,6 +17,7 @@
 		4E046B3E1A842B2300F90DB5 /* UINavigationController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E046B3D1A842B2300F90DB5 /* UINavigationController+Transitions.swift */; };
 		4E046B401A842D6600F90DB5 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E046B3F1A842D6600F90DB5 /* TransitionAnimator.swift */; };
 		4ECAADDC1A84380A00D08B16 /* AlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAADDB1A84380A00D08B16 /* AlphaViewController.swift */; };
+		4ECAADE01A851BDE00D08B16 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAADDF1A851BDE00D08B16 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4E046B3D1A842B2300F90DB5 /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
 		4E046B3F1A842D6600F90DB5 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
 		4ECAADDB1A84380A00D08B16 /* AlphaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaViewController.swift; sourceTree = "<group>"; };
+		4ECAADDF1A851BDE00D08B16 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4E046B221A8428B500F90DB5 /* Images.xcassets */,
 				4E046B241A8428B500F90DB5 /* LaunchScreen.xib */,
 				4E046B191A8428B500F90DB5 /* Supporting Files */,
+				4ECAADDF1A851BDE00D08B16 /* README.md */,
 			);
 			path = NavigationControllerAnimations;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				4E046B3C1A842A8B00F90DB5 /* RootNavigationControllerDelegate.swift in Sources */,
 				4E046B1E1A8428B500F90DB5 /* RootViewController.swift in Sources */,
 				4E046B401A842D6600F90DB5 /* TransitionAnimator.swift in Sources */,
+				4ECAADE01A851BDE00D08B16 /* README.md in Sources */,
 				4E046B3E1A842B2300F90DB5 /* UINavigationController+Transitions.swift in Sources */,
 				4ECAADDC1A84380A00D08B16 /* AlphaViewController.swift in Sources */,
 				4E046B1C1A8428B500F90DB5 /* AppDelegate.swift in Sources */,

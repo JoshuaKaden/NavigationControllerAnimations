@@ -20,6 +20,10 @@ class AlphaViewController: UIViewController {
         self.view.backgroundColor = UIColor.lightGrayColor()
         self.title = "Alpha View Controller"
         
+        self.setupControls()
+    }
+    
+    private func setupControls() {
         self.titleLabel.textAlignment = .Center
         self.titleLabel.text = self.title
         self.view.addSubview(self.titleLabel)

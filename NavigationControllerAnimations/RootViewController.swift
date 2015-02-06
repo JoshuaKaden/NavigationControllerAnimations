@@ -24,6 +24,10 @@ class RootViewController: UIViewController {
         self.navigationController?.delegate = self.navigationControllerDelegate
         self.navigationController?.navigationBarHidden = true
         
+        self.setupControls()
+    }
+    
+    private func setupControls() {
         self.titleLabel.textAlignment = .Center
         self.titleLabel.text = self.title
         self.view.addSubview(self.titleLabel)
@@ -31,7 +35,7 @@ class RootViewController: UIViewController {
         self.standardButton.addTarget(self, action: "standardButtonWasTapped", forControlEvents: .TouchUpInside)
         self.standardButton.setTitle("Standard", forState: .Normal)
         self.view.addSubview(self.standardButton)
-
+        
         self.fadeButton.addTarget(self, action: "fadeButtonWasTapped", forControlEvents: .TouchUpInside)
         self.fadeButton.setTitle("Fade", forState: .Normal)
         self.view.addSubview(self.fadeButton)
