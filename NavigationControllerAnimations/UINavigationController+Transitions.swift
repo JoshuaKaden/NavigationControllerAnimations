@@ -11,14 +11,14 @@ import UIKit
 extension UINavigationController {
     
     func transitionType() -> HSTransitionType {
-        if let delegate = self.delegate? as? RootNavigationControllerDelegate {
+        if let delegate = self.delegate as? RootNavigationControllerDelegate {
             return delegate.transitionType
         }
         return .Standard
     }
     
     func setTransitionType(transitionType: HSTransitionType) {
-        if let delegate = self.delegate? as? RootNavigationControllerDelegate {
+        if let delegate = self.delegate as? RootNavigationControllerDelegate {
             delegate.transitionType = transitionType
         }
     }

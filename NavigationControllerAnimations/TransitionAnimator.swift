@@ -22,7 +22,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - UIViewControllerAnimatedTransitioning Functions
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return self.duration
     }
     
@@ -39,13 +39,16 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!.view
         let fromView = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!.view
         
-        transitionContext.containerView().addSubview(toView)
+        guard let containerView = transitionContext.containerView() else {
+            return
+        }
+        containerView.addSubview(toView)
         
         switch self.operation {
         case .Push:
-            self.performPushAnimation(toView: toView, completion: completion)
+            self.performPushAnimation(toView, completion: completion)
         case .Pop:
-            self.performPopAnimation(fromView: fromView, completion: completion)
+            self.performPopAnimation(fromView, completion: completion)
         default:
             completion()
             return()
@@ -54,7 +57,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - Custom Animation Functions
     
-    private func performPushAnimation(#toView: UIView, completion: () -> ()) {
+    private func performPushAnimation(toView: UIView, completion: () -> ()) {
         var frame = toView.frame
         switch self.type {
         case .Standard:
@@ -83,7 +86,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
     
-    private func performPopAnimation(#fromView: UIView, completion: () -> ()) {
+    private func performPopAnimation(fromView: UIView, completion: () -> ()) {
         fromView.superview?.bringSubviewToFront(fromView)
         var frame = fromView.frame
         UIView.animateWithDuration(self.duration, animations: {

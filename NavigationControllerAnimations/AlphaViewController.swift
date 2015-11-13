@@ -11,9 +11,9 @@ import UIKit
 class AlphaViewController: UIViewController {
 
     private let titleLabel = UILabel()
-    private let standardButton: UIButton = UIButton.buttonWithType(.System) as UIButton
-    private let fadeButton: UIButton = UIButton.buttonWithType(.System) as UIButton
-    private let fromBottomButton: UIButton = UIButton.buttonWithType(.System) as UIButton
+    private let standardButton = UIButton()
+    private let fadeButton = UIButton()
+    private let fromBottomButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()

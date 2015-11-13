@@ -12,13 +12,13 @@ class RootViewController: UIViewController {
 
     private let navigationControllerDelegate = RootNavigationControllerDelegate()
     private let titleLabel = UILabel()
-    private let standardButton: UIButton = UIButton.buttonWithType(.System) as UIButton
-    private let fadeButton: UIButton = UIButton.buttonWithType(.System) as UIButton
-    private let fromBottomButton: UIButton = UIButton.buttonWithType(.System) as UIButton
+    private let standardButton = UIButton()
+    private let fadeButton = UIButton()
+    private let fromBottomButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.grayColor()
         self.title = "Root View Controller"
         
         self.navigationController?.delegate = self.navigationControllerDelegate
